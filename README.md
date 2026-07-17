@@ -60,11 +60,21 @@ The browser must never receive private FuFire credentials. Calculation, normaliz
 - Zi Wei Dou Shu pair mapping remains `SOURCE_NEEDED` until a reviewed methodology exists.
 - Marriage, separation, health, wealth or destiny guarantees are blocked.
 
-## Jira
+## Jira delivery structure
 
-Primary product epic: `BAZ-5` — Fusion-Synastrie integrieren.
+Primary product epic:
 
-Backend/API work is coordinated with the FuFire project, primarily `FUF-53`, `FUF-64` and the HeHun release-gate work under `FUF-3`.
+- [BAZ-5 — Fusion-Synastrie integrieren](https://dyai2026.atlassian.net/browse/BAZ-5)
+
+New implementation items:
+
+- [BAZ-54 — Mapping Registry v1](https://dyai2026.atlassian.net/browse/BAZ-54)
+- [BAZ-55 — Relationship-Dynamics Click-Dummy](https://dyai2026.atlassian.net/browse/BAZ-55)
+- [FUF-92 — Relationship BFF and Report Contract](https://dyai2026.atlassian.net/browse/FUF-92)
+
+Backend/API work also depends on the FuFire work under `FUF-3`, `FUF-53` and `FUF-64`.
+
+See [`docs/jira/TRACEABILITY.md`](docs/jira/TRACEABILITY.md) for the full mapping between GitHub authorities and Jira delivery items.
 
 ## GitHub
 
