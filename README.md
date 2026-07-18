@@ -1,81 +1,24 @@
 # Bazodiac Relationship
 
-Bazodiac Relationship is the product and engineering workspace for a multiperspective relationship-analysis tool that combines:
+Bazodiac Relationship is the product and engineering workspace for a multiperspective, evidence-oriented relationship-reflection tool combining released FuFirE sources from BaZi/HeHun/Wu Xing/Da Yun, Western astrology and later reviewed ZWDS context.
 
-- BaZi and HeHun relationship signals;
-- Wu Xing as a dynamic explanatory layer;
-- Da Yun as a long-term timing layer;
-- western natal astrology and synastry;
-- Zi Wei Dou Shu as an additional life-domain perspective once its rules are explicitly released.
+It does **not** output a deterministic compatibility score, diagnosis or prediction. The centre shows the interaction; the sides show its source. Shadow and opportunity are conditional expressions of one mechanism.
 
-The product does **not** output a deterministic compatibility score. It presents observable, evidence-bound relationship dynamics with two possible expression paths:
-
-- **Shadow** — how a dynamic can become constraining under specific conditions;
-- **Opportunity** — how the same dynamic can become useful under different conditions.
-
-## Product principle
-
-> The centre shows the interaction. The sides show its origin. Shadow and opportunity describe conditional expressions, not predetermined outcomes.
-
-## Repository structure
-
-```text
-docs/
-  product/
-    PRD.md
-  architecture/
-    SYSTEM_ARCHITECTURE.md
-    ADR-001-backend-for-frontend.md
-    ADR-002-evidence-bound-mapping.md
-  api/
-    RELATIONSHIP_REPORT_CONTRACT.md
-  design/
-    UI_UX_DECISIONS.md
-  mapping/
-    MAPPING_METHOD.md
-  prototype/
-    CLICK_DUMMY_SPEC.md
-  jira/
-    TRACEABILITY.md
-```
-
-## Current status
-
-This repository currently contains the product foundation, architecture decisions, mapping method, API contract draft and UI prototype specification. Production code and live FuFire integration are not yet implemented.
+## Canonical documents
+- [AI-native PRD](docs/product/prd_report.md)
+- [Machine-readable PRD](docs/product/prd_report.json)
+- [BRIDGE-R v1.1 method](docs/mapping/BRIDGE_R_METHOD.md)
+- [Evidence-dialectic audit](docs/audit/BRIDGE_R_EVIDENCE_DIALECTIC_AUDIT.md)
+- [Implementation plan](docs/plans/2026-07-17-bridge-r-implementation-plan.md)
+- [Requirement traceability](docs/product/TRACEABILITY_MATRIX.md)
+- [GitHub–Jira traceability](docs/jira/TRACEABILITY.md)
 
 ## System boundary
-
 ```text
-Browser -> Bazodiac Relationship BFF -> FuFire APIs
+Browser → Bazodiac Relationship BFF → FuFirE APIs
 ```
 
-The browser must never receive private FuFire credentials. Calculation, normalization, evidence aggregation and mapping remain server-side.
+Calculation, evidence, mapping and eligibility remain deterministic and server-side. Language generation is optional and non-authoritative.
 
-## Source and safety model
-
-- Calculation is deterministic and versioned.
-- Mapping is rule-based, reviewable and evidence-bound.
-- Language generation is a final rendering step only.
-- BaZi, Wu Xing, HeHun and Da Yun belong to one dependency family and must not be counted as independent confirmations.
-- Zi Wei Dou Shu pair mapping remains `SOURCE_NEEDED` until a reviewed methodology exists.
-- Marriage, separation, health, wealth or destiny guarantees are blocked.
-
-## Jira delivery structure
-
-Primary product epic:
-
-- [BAZ-5 — Fusion-Synastrie integrieren](https://dyai2026.atlassian.net/browse/BAZ-5)
-
-New implementation items:
-
-- [BAZ-54 — Mapping Registry v1](https://dyai2026.atlassian.net/browse/BAZ-54)
-- [BAZ-55 — Relationship-Dynamics Click-Dummy](https://dyai2026.atlassian.net/browse/BAZ-55)
-- [FUF-92 — Relationship BFF and Report Contract](https://dyai2026.atlassian.net/browse/FUF-92)
-
-Backend/API work also depends on the FuFire work under `FUF-3`, `FUF-53` and `FUF-64`.
-
-See [`docs/jira/TRACEABILITY.md`](docs/jira/TRACEABILITY.md) for the full mapping between GitHub authorities and Jira delivery items.
-
-## GitHub
-
-Repository: https://github.com/DYAI2025/Bazodiac_Relationship
+## Current status
+Documentation and BRIDGE-R v1.1 are ready for review. Runtime implementation is not complete. Authentication, retention, Western synastry, Rule Card source authority and Release-1 validation thresholds remain blockers.
