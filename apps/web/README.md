@@ -20,9 +20,11 @@ The implementation currently includes:
 ## Run locally
 
 ```bash
-npm ci
+npm install
 npm run dev
 ```
+
+A lockfile is not yet committed on this branch. Add and review it before treating the branch as a reproducible release artifact.
 
 ## Validate
 
@@ -43,7 +45,7 @@ The next production step is a typed `RelationshipReport` domain package and an a
 - no versioned RelationshipReport schema integration;
 - no partial-result or provider-status handling;
 - no repository-owned unit, accessibility or E2E test suite;
-- dependency audit findings require an upgrade before production use;
+- dependency and lockfile review required before production use;
 - hash routing is prototype-level only.
 
 ## Product invariants
