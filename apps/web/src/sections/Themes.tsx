@@ -1,0 +1,1 @@
+import{themesContent as c}from"../data/content";export function Themes(){return <section className="section"><div className="shell"><p className="eyebrow">{c.eyebrow}</p><h2>{c.headline}</h2><p>{c.intro}</p><div className="themes">{c.themes.map(t=><article key={t.label}><span>{t.label}</span><h3>{t.title}</h3><p>{t.body}</p></article>)}</div></div></section>}
