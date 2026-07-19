@@ -9,8 +9,17 @@
 | Jira | Scope | GitHub authority |
 |---|---|---|
 | [BAZ-54](https://dyai2026.atlassian.net/browse/BAZ-54) | Mapping Registry v1 | [`docs/mapping/MAPPING_METHOD.md`](../mapping/MAPPING_METHOD.md), [`ADR-002`](../architecture/ADR-002-evidence-bound-mapping.md) |
-| [BAZ-55](https://dyai2026.atlassian.net/browse/BAZ-55) | Relationship UI click dummy | [`docs/prototype/CLICK_DUMMY_SPEC.md`](../prototype/CLICK_DUMMY_SPEC.md), [`docs/design/UI_UX_DECISIONS.md`](../design/UI_UX_DECISIONS.md) |
+| [BAZ-55](https://dyai2026.atlassian.net/browse/BAZ-55) | Relationship UI click dummy and frontend foundation | [`docs/prototype/CLICK_DUMMY_SPEC.md`](../prototype/CLICK_DUMMY_SPEC.md), [`docs/design/UI_UX_DECISIONS.md`](../design/UI_UX_DECISIONS.md), [`PRODUCT_CONCEPT_DECISIONS_2026-07-19.md`](../product/PRODUCT_CONCEPT_DECISIONS_2026-07-19.md), [`ADR-003`](../architecture/ADR-003-frontend-foundation-selection.md), [`apps/web`](../../apps/web) |
 | [FUF-92](https://dyai2026.atlassian.net/browse/FUF-92) | Relationship BFF and browser report contract | [`docs/api/RELATIONSHIP_REPORT_CONTRACT.md`](../api/RELATIONSHIP_REPORT_CONTRACT.md), [`ADR-001`](../architecture/ADR-001-backend-for-frontend.md) |
+
+## Frontend repositories
+
+| Repository / path | Role | Status |
+|---|---|---|
+| `DYAI2025/Bazodiac_Relationship/apps/web` | Canonical React/TypeScript frontend foundation | Feature branch; review required |
+| `DYAI2025/Bazodiac-relationships-GAIS` | Reference prototype and interaction donor | Separate documentation branch; not production authority |
+
+The two implementations must not be merged wholesale. Reviewed GAIS concepts may be reimplemented as typed modules in `apps/web`.
 
 ## Existing related Jira items
 
@@ -45,17 +54,17 @@ FUF-92 Relationship BFF contract
       ↓
 BAZ-54 Mapping Registry v1
       ↓
-BAZ-55 UI click dummy and later live frontend
+BAZ-55 UI click dummy and canonical frontend foundation
       ↓
 BAZ-31 pilot and acceptance gates
 ```
 
-The click dummy can be built with mock data before FUF-92 is complete. Live integration must not proceed until the relevant FuFire contracts and mapping rules are versioned and reviewed.
+The click dummy can be built with mock data before FUF-92 is complete. Live integration must not proceed until relevant FuFire contracts and mapping rules are versioned and reviewed.
 
 ## Governance
 
 - GitHub documentation is the versioned design and contract authority.
 - Jira tracks delivery state, ownership, dependencies and acceptance.
-- Every implementation pull request should include the relevant Jira key in the title or description.
+- Every implementation pull request includes the relevant Jira key in its title or description.
 - Contract or architecture changes require an updated ADR or versioned schema before the Jira item is closed.
 - ZWDS pair mapping remains `SOURCE_NEEDED` until a reviewed methodology exists.

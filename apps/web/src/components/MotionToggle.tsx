@@ -1,0 +1,2 @@
+import {useEffect,useState} from "react";
+export function MotionToggle(){const[reduced,setReduced]=useState(false);useEffect(()=>{const mq=matchMedia("(prefers-reduced-motion: reduce)");setReduced(mq.matches);document.documentElement.classList.toggle("reduced-motion",mq.matches)},[]);const toggle=()=>{const n=!reduced;setReduced(n);document.documentElement.classList.toggle("reduced-motion",n)};return <button className="motion-toggle" type="button" aria-pressed={reduced} onClick={toggle}>{reduced?"Enable motion":"Reduce motion"}</button>}
