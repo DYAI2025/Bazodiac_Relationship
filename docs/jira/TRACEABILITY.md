@@ -9,7 +9,7 @@
 | Jira | Scope | GitHub authority |
 |---|---|---|
 | [BAZ-54](https://dyai2026.atlassian.net/browse/BAZ-54) | Mapping Registry v1 | [`docs/mapping/MAPPING_METHOD.md`](../mapping/MAPPING_METHOD.md), [`ADR-002`](../architecture/ADR-002-evidence-bound-mapping.md) |
-| [BAZ-55](https://dyai2026.atlassian.net/browse/BAZ-55) | Relationship UI click dummy and frontend foundation | [`docs/prototype/CLICK_DUMMY_SPEC.md`](../prototype/CLICK_DUMMY_SPEC.md), [`docs/design/UI_UX_DECISIONS.md`](../design/UI_UX_DECISIONS.md), [`ADR-003`](../architecture/ADR-003-frontend-foundation-selection.md), [`apps/web`](../../apps/web) |
+| [BAZ-55](https://dyai2026.atlassian.net/browse/BAZ-55) | Relationship UI click dummy and frontend foundation | [`docs/prototype/CLICK_DUMMY_SPEC.md`](../prototype/CLICK_DUMMY_SPEC.md), [`docs/design/UI_UX_DECISIONS.md`](../design/UI_UX_DECISIONS.md), [`PRODUCT_CONCEPT_DECISIONS_2026-07-19.md`](../product/PRODUCT_CONCEPT_DECISIONS_2026-07-19.md), [`ADR-003`](../architecture/ADR-003-frontend-foundation-selection.md), [`apps/web`](../../apps/web) |
 | [FUF-92](https://dyai2026.atlassian.net/browse/FUF-92) | Relationship BFF and browser report contract | [`docs/api/RELATIONSHIP_REPORT_CONTRACT.md`](../api/RELATIONSHIP_REPORT_CONTRACT.md), [`ADR-001`](../architecture/ADR-001-backend-for-frontend.md) |
 
 ## Frontend repositories
