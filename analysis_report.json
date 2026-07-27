@@ -1,0 +1,22 @@
+{
+  "report_version": "1.0.0",
+  "title": "Bazodiac Relationship Chance & Shadow architecture and mobile foundation",
+  "status": "PARTIALLY_VERIFIED",
+  "standards_alignment": [
+    {"name": "C4/ADR", "status": "standard_aligned"},
+    {"name": "SARIF 2.1.0", "status": "format_compatible"}
+  ],
+  "evidence_ledger": [
+    {"id": "E1", "claim": "Relationship repository is the product, BFF contract and UI workspace; runtime is incomplete", "source": "GitHub README and source inspection", "status": "verified"},
+    {"id": "E2", "claim": "Chance and Shadow share one neutral mechanism and no current position is inferred", "source": "product vision and Jira FUF-118", "status": "verified"},
+    {"id": "E3", "claim": "Expo SDK 57 maps to React Native 0.86 and React 19.2.3", "source": "official Expo documentation", "status": "verified"}
+  ],
+  "findings": [
+    {"id": "BR-001", "severity": "high", "claim": "No implemented canonical Dynamic Polarity endpoint exists in the inspected client repositories", "remediation": "Implement FUF-118 and the FUF-117/FUF-120 contracts", "status": "PLANNED_NOT_IMPLEMENTED"},
+    {"id": "BR-002", "severity": "high", "claim": "A native mobile foundation was absent", "remediation": "BAZ-64 Expo boilerplate", "status": "IMPLEMENTED_ON_WORK_BRANCH"},
+    {"id": "BR-003", "severity": "medium", "claim": "No lockfile or verified CI workflow exists in the inspected baseline", "remediation": "Generate lockfile in a networked environment and add CI", "status": "MISSING"}
+  ],
+  "artifact_policy": {"required": ["analysis_report.md", "analysis_report.json", "code_findings.sarif.json"], "generated": true},
+  "optional_artifacts": ["Confluence pages", "draft PR"],
+  "open_questions": ["Final auth provider", "retention periods", "domain expert approval for first rule cards", "production BFF URL"]
+}
