@@ -1,0 +1,13 @@
+{
+  "name": "bazodiac-relationship-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "engines": {"node": ">=22.13.0"},
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test:architecture": "node scripts/check-architecture.mjs",
+    "test:contracts": "node --test tests/contracts/*.test.mjs",
+    "check": "npm run test:architecture && npm run test:contracts && npm run typecheck"
+  }
+}
